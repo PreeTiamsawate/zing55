@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Member Page 2
+    <title>Transaction History
     </title>
     <!-- Google font Kanit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +18,7 @@
     <!-- Local CSS -->
     <link rel="stylesheet" href="./css/common_style.css">
     <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/member_page2.css">
-
+    <link rel="stylesheet" href="./css/transaction history.css">
 
 </head>
 
@@ -45,65 +44,92 @@
             </div>
         </div>
     </nav>
-    <section class="main-section">
-
-        <div class="member-center mx-auto">
-            <p><span>รหัสสมาชิกของคุณ:</span> <span class="account-number">ZING55007632152</span> </p>
-            <div class="wallet-info">
-                <h1>ยอดเครดิตของคุณ</h1>
-                <div class="bank-info">
-                    <p><span class="credit-amount">100,000,000</span> <span>฿</span></p>
-                    <p> <span>ข้อมูลบัญชีของคุณ:</span> <span class="bank-acount-number"> 123456789</span> <span class="bank-name"> ธนาคารกสิกรไทย</span></p>
+    <section class="info-section">
+        <div class="tab mx-auto">
+            <button class="tablinks" id="defaultOpen" onclick="openGames(event, 'deposite-history')">
+                <img src="./images/transaction-history/deposit_icon.svg" alt="deposite history">
+                <div>
+                    <h3>ประวัติ</h3>
+                    <h4>การฝากเงิน</h4>
                 </div>
-                <div class="transaction-btns">
-                    <a href="" class="deposite-btn">ฝากเงิน</a>
-                    <a href="" class="withdraw-btn">ถอนเงิน</a>
+              
+            </button>
+            <button class="tablinks" onclick="openGames(event, 'withdraw-history')">
+                <img src="./images/transaction-history/withdraw_icon.svg" alt="withdraw history">
+                <div>
+                    <h3>ประวัติ</h3>
+                    <h4>การถอนเงิน</h4>
                 </div>
-
-                <a href="" class="play-btn">
-                    <img src="./images/member_page2/Icon ionic-md-play.png" alt="play">
-                    <p>เข้าเล่นเกมส์</p>
-
-                </a>
-
+                
+            </button>
+        </div>
+        <div id="deposite-history" class="tabcontent member-info mx-auto">
+            <div class="accout-info">
+                <h1>ประวัติ การฝากเงิน</h1>
             </div>
-            <div class="member-menu">
-                <a class="menu-card" href="">
-                    <img src="./images/member_page2/menu-icons/ฝากเงิน.png" alt="ฝากเงิน">
-                    <p>ฝากเงิน</p>
-                </a>
-                <a class="menu-card" href="">
-                    <img src="./images/member_page2/menu-icons/ถอนเงิน.png" alt="ถอนเงิน">
-                    <p>ถอนเงิน</p>
-                </a>
-                <a class="menu-card" href="">
-                    <img src="./images/member_page2/menu-icons/ประวัติ.png" alt="ประวัติ">
-                    <p>ประวัติ</p>
-                </a>
-                <a class="menu-card" href="">
-                    <img src="./images/member_page2/menu-icons/รับค่าคอมฯ.png" alt="รับค่าคอมฯ">
-                    <p>รับค่าคอมฯ</p>
-                </a>
-                <a class="menu-card" href="">
-                    <img src="./images/member_page2/menu-icons/ลัคกี้สปิน ลุ้นทองคำ.png" alt="ลัคกี้สปิน ลุ้นทองคำ">
-                    <p>ลัคกี้สปิน <br> ลุ้นทองคำ</p>
-                </a>
-                <a class="menu-card" href="">
-                    <img src="./images/member_page2/menu-icons/แนะนำเพื่อน รับค่าคอมฯ.png" alt="แนะนำเพื่อน รับค่าคอมฯ">
-                    <p>แนะนำเพื่อน <br> รับค่าคอมฯ</p>
-                </a>
-                <a class="menu-card" href="">
-                    <img src="./images/member_page2/menu-icons/รางวัล ประจำเดือน.png" alt="รางวัล ประจำเดือน">
-                    <p>รางวัล <br> ประจำเดือน</p>
-                </a>
-                <a class="menu-card" href="">
-                    <img src="./images/member_page2/menu-icons/รางวัล ประจำวัน.png" alt="รางวัล ประจำวัน">
-                    <p>รางวัล <br> ประจำวัน</p>
-                </a>
-                <a class="menu-card" href="">
-                    <img src="./images/member_page2/menu-icons/ออกจากระบบ.svg" alt="ออกจากระบบ">
-                    <p>ออกจากระบบ</p>
-                </a>
+            <div class="table-container table-responsive">
+                <table class="table table-borderless mx-auto">
+                    <thead>
+                        <tr>
+                            <th scope="col">หมายเลขธุรกรรม</th>
+                            <th scope="col">วันที่</th>
+                            <th scope="col">ชื่อผู้ใช้</th>
+                            <th scope="col">โอนเข้าธนาคาร/หมายเหตุ</th>
+                            <th scope="col">จำนวนเงิน</th>
+                            <th scope="col">สถานะ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>4567890</td>
+                            <td>0000000.00</td>
+                            <td>0000000.00</td>
+                            <td>0000000.00</td>
+                            <td>0000000.00</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div id="withdraw-history" class="tabcontent member-info mx-auto">
+            <div class="accout-info">
+                <h1>ประวัติ การถอนเงิน</h1>
+            </div>
+            <div class="table-container table-responsive">
+                <table class="table table-borderless mx-auto">
+                    <thead>
+                        <tr>
+                            <th scope="col">หมายเลขธุรกรรม</th>
+                            <th scope="col">วันที่</th>
+                            <th scope="col">ชื่อผู้ใช้</th>
+                            <th scope="col">โอนเข้าธนาคาร/หมายเหตุ</th>
+                            <th scope="col">จำนวนเงิน</th>
+                            <th scope="col">สถานะ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>1234567890</td>
+                            <td>0000000000.00</td>
+                            <td>0000000000.00</td>
+                            <td>0000000000.00</td>
+                            <td>0000000000.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>1234567890</td>
+                            <td>0000000000.00</td>
+                            <td>0000000000.00</td>
+                            <td>0000000000.00</td>
+                            <td>0000000000.00</td>
+                        </tr>
+
+                    </tbody>
+                </table>
             </div>
 
         </div>
@@ -128,8 +154,8 @@
     <!-- Javascript for Bootstrap5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js " integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4 " crossorigin="anonymous "></script>
 
+    <script src="./js/tap_panel_control.js"></script>
     <script src="./js/navbar_control.js"></script>
-
 </body>
 
 </html>

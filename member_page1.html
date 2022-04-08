@@ -71,12 +71,82 @@
         </div>
     </section>
     <section class="game-section">
-        <a href=""><img src="./images/member_page1/game-banners/Mask Group 21@2x.png" alt=""></a>
-        <a href=""><img src="./images/member_page1/game-banners/Mask Group 27@2x.png" alt=""></a>
-        <a href=""><img src="./images/member_page1/game-banners/Mask Group 28@2x.png" alt=""></a>
-        <a href=""><img src="./images/member_page1/game-banners/Mask Group 29@2x.png" alt=""></a>
-        <a href=""><img src="./images/member_page1/game-banners/Mask Group 30@2x.png" alt=""></a>
-
+        <div class="tab mx-auto">
+            <button class="tablinks" id="defaultOpen" onclick="openGames(event, 'slot-games')">
+                <div>
+                    <h3>สล๊อต</h3>
+                    <h4>SLOT GAME</h4>
+                </div>
+                <img src="./images/home/slot-icon.png" alt="slot game">
+            </button>
+            <button class="tablinks" onclick="openGames(event, 'casino-games')">
+                <div>
+                    <h3>คาสิโน</h3>
+                    <h4>LIVE CASINO</h4>
+                </div>
+                <img src="./images/home/casino-icon.png" alt="live casino">
+            </button>
+            <button class="tablinks" onclick="openGames(event, 'sport-games')">
+                <div>
+                    <h3>กีฬา</h3>
+                    <h4>SPORt GAME</h4>
+                </div>
+                <img src="./images/home/sport-icon.png" alt="sport">
+            </button>
+            <button class="tablinks" onclick="openGames(event, 'fishing-games')">
+                <div>
+                    <h3>ตกปลา</h3>
+                    <h4>FISHING</h4>
+                </div>
+                <img src="./images/home/fishing-icon.png" alt="fishing">
+            </button>
+        </div>
+        <div id="slot-games" class="tabcontent mx-auto">
+            <a href=""><img src="./images/home/brand-icon/ab.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/amb.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/aws.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/cq.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/ep.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/fg.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/ic.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/jk.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/km.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/lv22.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/mg.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/mgm.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/ne.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/pg.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/pmp.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/ps.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/sg.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/sp.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/wd.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/xo.png" alt=""></a>
+        </div>
+        <div id="casino-games" class="tabcontent mx-auto">
+            <a href=""><img src="./images/home/brand-icon/ab.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/amb.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/aws.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/cq.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/ep.png" alt=""></a>
+        </div>
+        <div id="sport-games" class="tabcontent mx-auto">
+            <a href=""><img src="./images/home/brand-icon/fg.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/ic.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/jk.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/km.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/lv22.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/mg.png" alt=""></a>
+        </div>
+        <div id="fishing-games" class="tabcontent mx-auto">
+            <a href=""><img src="./images/home/brand-icon/km.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/lv22.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/mg.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/mgm.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/ne.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/pg.png" alt=""></a>
+            <a href=""><img src="./images/home/brand-icon/pmp.png" alt=""></a>
+        </div>
     </section>
     <footer>
         <div class="footer-container mx-auto">
@@ -97,7 +167,7 @@
     </footer>
     <!-- Javascript for Bootstrap5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js " integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4 " crossorigin="anonymous "></script>
-
+    <script src="./js/tap_panel_control.js"></script>
     <script src="./js/navbar_control.js"></script>
 </body>
 
