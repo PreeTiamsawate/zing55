@@ -165,20 +165,105 @@
     padding-top: 50px;
     height: auto;
     background-color: #122033;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
     padding-bottom: 50px;
 }
 
-.game-section a {
-    width: 80%;
-    max-width: 1000px;
+.tab {
+    overflow: hidden;
+    width: 95%;
+    max-width: 1160px;
     height: auto;
+    min-height: 86px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.game-section img {
-    width: 100%;
+.tab button {
+    cursor: pointer;
+    transition: 0.3s;
+    width: 232px;
+    height: 86px;
+    box-shadow: var(--blue-box-shadow);
+    border: var(--border-thick);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* gap: 10px; */
+    background-color: black;
+    margin-top: 10px;
+}
+
+.tablinks h3 {
+    width: 100;
+    margin: 0;
+    text-align: center;
+    font: normal normal normal 28px/32px Kanit;
+    letter-spacing: 0px;
+    color: var(--white-text-color);
+    text-shadow: var(--blue-text-shadow-299FF5);
+}
+
+.tablinks h4 {
+    margin: 0;
+    text-align: center;
+    font: normal normal normal 16px/16px Kanit;
+    letter-spacing: 0px;
+    color: var(--white-text-color);
+    text-shadow: var(--blue-text-shadow-299FF5);
+}
+
+.tablinks img {
+    width: 70px;
+    height: 70px;
+}
+
+.tabcontent {
+    margin-top: -43px;
+    display: none;
+    width: 95%;
+    max-width: 1160px;
+    box-shadow: var(--blue-box-shadow);
+    border: var(--border-main);
+    border-radius: 20px;
+    padding-top: 60px;
+    padding-bottom: 20px;
     height: auto;
+    /* min-height: 650px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tabcontent img {
+    width: 220px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+@media (max-width:576px) {
+    .tab button {
+        width: 139px;
+        height: 52px;
+        gap: 5px;
+        border: var(--border-main);
+    }
+    .tablinks h3 {
+        font: normal normal normal 16px/24px Kanit;
+    }
+    .tablinks h4 {
+        font: normal normal normal 8px/12px Kanit;
+    }
+    .tablinks img {
+        width: 48px;
+        height: 48px;
+    }
+    .tabcontent img {
+        width: 137px;
+    }
+    .tabcontent {
+        margin-top: -26px;
+        /* max-width: 350px; */
+    }
 }
